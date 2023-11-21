@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman';
+  font-family: 'Josefin Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url('./images/bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.profile-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 10px 30px #20304046;
+  border: 10px solid transparent;
+  border-image: url('./images/border-bg.png') 40 repeat;
+}
+
+.profile-card .left-image {
+  flex: 30%;
+}
+
+.profile-card .right-text {
+  flex: 60%;
+}
+
+.profile-card .image-div {
+  width: 200px;
+  border-radius: 12px;
+}
+
+.profile-card .image-div>img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.details-div .group {
+  margin-bottom: 22px;
+  display: block;
+}
+
+.details-div .name {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.details-div .group .title {
+  font-weight: bold;
+  font-size: 19px;
+  color: #22092C;
+  vertical-align: top;
+}
+
+.details-div .group .text {
+  vertical-align: bottom;
+  display: inline-block;
+  font-size: 17px;
+  margin-left: 8px;
+  text-transform: capitalize;
+}
+
+.details-div .group .addr {
+  line-height: 22px;
+  font-size: 17px;
+  padding: 0 10px;
+}
+
+@media only screen and (max-width: 890px) {
+  .profile-card {
+    width: 80%;
+    flex-direction: column;
+  }
+
+  .details-div .name {
+    display: block;
+  }
+
+  .details-div .name div {
+    margin: 20px 0;
+  }
+
+  table {
+    width: 100%;
+  }
+}
